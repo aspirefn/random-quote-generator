@@ -20,16 +20,14 @@ var quotes = [
 
 function getRandomQuote() {
 
-  var randomQuoteNum = Math.floor(Math.random() * quotes.length) + 1;
+  var randomQuoteNum = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuoteNum];
 
 }
 
 function printQuote() {
   var randomQuote = getRandomQuote();
-   console.log('random quote', randomQuote);
-    var html;
-    html+="<p class=\"quote\">"+randomQuote.quote+"</p><p class=\"source\">"+randomQuote.source+"";
+    var html ="<p class=\"quote\">"+randomQuote.quote+"</p><p class=\"source\">"+randomQuote.source+"";
   if (randomQuote.citation != undefined) 
    html+="<span class=\"citation\">"+randomQuote.citation+"</span>";
   if (randomQuote.year != undefined) 
