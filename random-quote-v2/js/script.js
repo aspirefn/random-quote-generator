@@ -2,6 +2,7 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+// array of objects containing quote, source and citation
 var quotes = [
   {  quote: "Don't cry because it's over, smile because it happened.", 
      source: "Dr. Seuss", 
@@ -18,6 +19,7 @@ var quotes = [
 ];
 
 
+// function to get random object from quotes array
 function getRandomQuote() {
 
   var randomQuoteNum = Math.floor(Math.random() * quotes.length);
@@ -25,12 +27,17 @@ function getRandomQuote() {
 
 }
 
+// function to print random object from quotes array
 function printQuote() {
+// call function to get random object from quotes array
   var randomQuote = getRandomQuote();
-    var html ="<p class=\"quote\">"+randomQuote.quote+"</p><p class=\"source\">"+randomQuote.source+"";
+  var html ="<p class=\"quote\">"+randomQuote.quote+"</p><p class=\"source\">"+randomQuote.source+"";
   if (randomQuote.citation != undefined) 
+// if there is no "citation" attribute in the random object, do not include for display in html
    html+="<span class=\"citation\">"+randomQuote.citation+"</span>";
   if (randomQuote.year != undefined) 
+// if there is no "year" attribute in the random object, do not include for display in html
     html+="<span class=\"year\">"+randomQuote.year+"</span></p>";
-document.getElementById('quote-box').innerHTML = html;
+// display random object from quotes array in html
+   document.getElementById('quote-box').innerHTML = html;
 }
