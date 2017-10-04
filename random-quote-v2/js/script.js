@@ -15,6 +15,14 @@ var quotes = [
   {  quote: "Be yourself; everyone else is already taken.", 
      source: "Oscar Wilde", 
      citation: "Goodreads" 
+  },
+  {  quote: "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.", 
+     source: "Bernard Baruch", 
+     citation: "Goodreads" 
+  },
+  {  quote: "You only live once, but if you do it right, once is enough.", 
+     source: "Mae West", 
+     citation: "Goodreads" 
   }
 ];
 
